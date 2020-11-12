@@ -21,6 +21,13 @@ class Polygon {
 }
 
 //Triangle
-
+class Triangle extends Polygon {
+    get isValid() {
+        const side1 = this.sides[0]
+        const side2 = this.sides[1]
+        const side3 = this.sides[2]
+        return (side1 + side2 > side3 && side2 + side3 > side1 && side3 + side1 > side2) ? true : false
+    }
+}
 
 //Square
