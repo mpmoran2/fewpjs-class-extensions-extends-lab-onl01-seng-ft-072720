@@ -33,18 +33,16 @@ class Triangle extends Polygon {
 
 //Square
 class Square extends Polygon {
+  
+    get isValid() {
+        const side1 = this.sides[0]
+        const side2 = this.sides[1]
+        const side3 = this.sides[2]
+        const side4 = this.sides[3]
+        return (side1 === side2 && side2 === side3 && side3 === side4) ? true : false
+    }
 
-  get isValid() {
-    if (!Array.isArray(this.sides)) return;
-    if (this.count !== 4) return;
-    let side1 = this.sides[0]
-    let side2 = this.sides[1]
-    let side3 = this.sides[2]
-    let side4 = this.sides[3]
-    return ((side1 === side2) && (side1 === side3) && (side1 === side4))
-  }
-
-  get area() {
+    get area() {
     if (!Array.isArray(this.sides)) return;
     if (this.count !== 4) return;
     return this.sides[0] * this.sides[0]
