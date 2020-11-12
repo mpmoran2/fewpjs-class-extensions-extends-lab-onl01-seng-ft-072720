@@ -22,6 +22,7 @@ class Polygon {
 
 //Triangle
 class Triangle extends Polygon {
+  
     get isValid() {
         const side1 = this.sides[0]
         const side2 = this.sides[1]
@@ -32,6 +33,7 @@ class Triangle extends Polygon {
 
 //Square
 class Square extends Polygon {
+  
     get isValid() {
         const side1 = this.sides[0]
         const side2 = this.sides[1]
