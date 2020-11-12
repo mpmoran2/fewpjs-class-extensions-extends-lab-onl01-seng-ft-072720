@@ -1,4 +1,5 @@
 // Your code here
+//Polygon
 class Polygon {
 
     constructor(arrayOfSides) {
@@ -18,3 +19,8 @@ class Polygon {
     return sum
     }
 }
+
+//Triangle
+
+
+//Square
