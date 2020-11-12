@@ -10,7 +10,10 @@ class Polygon {
     }
 
     get perimeter() {
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        return this.sides.reduce(reducer, 0)
+    if (!Array.isArray(this.sides)) return;
+    let sum = 0;
+    for (var int of this.sides) {
+      sum += int
     }
+    return sum
 }
