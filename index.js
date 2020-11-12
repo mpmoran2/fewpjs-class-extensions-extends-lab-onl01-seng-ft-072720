@@ -31,7 +31,6 @@ class Triangle extends Polygon {
 }
 
 //Square
-
 class Square extends Polygon {
     get isValid() {
         const side1 = this.sides[0]
@@ -42,6 +41,8 @@ class Square extends Polygon {
     }
 
     get area() {
-        return this.sides[0] ** 2
-    }
+    if (!Array.isArray(this.sides)) return;
+    if (this.count !== 4) return;
+    return this.sides[0] * this.sides[0]
+  }
 }
